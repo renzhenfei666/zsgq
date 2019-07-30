@@ -1,0 +1,7 @@
+/**app.wxss**/
+@import "/miniprogram_npm/vant-weapp/common/index.wxss";
+.container{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

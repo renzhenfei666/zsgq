@@ -1,0 +1,63 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <scroll-view scroll-y style="height:calc(100vh - 120rpx)" class="scroll">
+    <view class="top">
+      <view class="cover">
+        <image class="iconImg" lazy-load="true" src="{{detail.cover}}" mode="aspectFill"></image>
+      </view>
+      <view class="detail">
+        <view class="title">{{detail.title}}</view>
+        <view class="score">
+          <view class="scoreText">{{ detail.rating.score }}</view>
+          <van-rate value="{{ detail.rating.score/2 }}" size="16"  bind:change="onChange" readonly/>
+          <!-- <view>{{ detail.rating.tip }}</view> -->
+        </view>
+
+        <view class="author"><label class="label">{{detail.author}}</label> | {{detail.majorCate}}</view>
+        <view class="wordCount">{{detail.wordCount}}万字</view>
+      </view>
+    </view>
+    <view class="collection">
+      <view class="collectionConten">
+        <view class="num">{{detail.latelyFollower}}</view>
+        <view class="zs">追书人气</view>
+      </view>
+      <view class="collectionConten">
+        <view class="num">{{detail.retentionRatio}}%</view>
+        <view class="zs">读者留存</view>
+      </view>
+      <view class="collectionConten">
+        <view class="num">{{detail.serializeWordCount}}</view>
+        <view class="zs">日更字数</view>
+      </view>
+    </view>
+    <view class="introduction">
+      <van-collapse value="{{ activeNames }}" bind:change="onChange">
+        <van-collapse-item title="简介" name="1" >
+          {{detail.longIntro}}
+        </van-collapse-item>
+      </van-collapse>
+    </view>
+    <view class="hotReview">
+      <van-cell title="热门评论" class="hot"/>
+      <block wx:if="{{reviews.length>0}}">
+        <view class="review" wx:for="{{reviews}}" wx:key="index">
+          <view class="review-title">{{item.title}}</view>
+          <view class="review-content van-multi-ellipsis--l3">{{item.content}}</view>
+          <!-- <view class="review-user">
+            <view></view>
+            <view></view>
+          </view> -->
+        </view>
+      </block>
+      <block wx:else>
+        <view class="noReview">暂无评论</view>
+      </block>
+    </view>
+  </scroll-view>
+  <view class="btn van-hairline--top">
+    <button class="cu-btn round lg bg-grey" wx:if="{{hasStorage}}" bindtap="noMorePursuit">不追了</button>
+    <button class="cu-btn round lg bg-orange" wx:else bindtap="joinBookshelf">加入书架</button>
+    <navigator url="../read/read?link={{link}}&id={{detail._id}}"><button class="cu-btn round lg bg-red">开始阅读</button></navigator>
+  </view>
+</view>

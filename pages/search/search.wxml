@@ -1,0 +1,14 @@
+<!--pages/search/search.wxml-->
+<view>
+  <view class="search">
+    <van-search value="{{ value }}" use-action-slot placeholder="请输入搜索关键词" bind:change="getData"/>
+    <!-- <view slot="action" bind:tap="onSearch">搜索</view> -->
+  </view>
+  <view class="searchCell">
+    <scroll-view scroll-y style="height:calc(100vh - 200px)">
+      <navigator url="../detail/detail?id={{item._id}}" wx:for="{{list}}" wx:key="index">
+        <van-cell title="{{item.title}}" icon="label-o"/>
+      </navigator>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/bookshelf/bookshelf.wxml-->
+<scroll-view class="scroll-view" scroll-y style="height:100vh">
+  <view class="cu-list menu-avatar">
+    <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}} item-{{index}} list" wx:for="{{bookshelf}}" wx:key bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}" wx:key="index">
+    <navigator url="../read/read?link={{item.link}}&id={{item.detail._id}}" class="nav">
+      <view class="icon">
+        <image class="iconImg" lazy-load="true" src="{{item.show ? item.detail.cover :noCover}}" mode="aspectFill"></image>
+      </view>
+      <view class="sortName">
+        <view class="title">{{item.detail.title}}</view>
+        <view class="shortIntro van-ellipsis">最新：{{item.detail.lastChapter}}</view>
+        <view class="updated">{{item.detail.updated}}更新</view>
+      </view>
+    </navigator>
+    <view class="move">
+      <view class="bg-red" bindtap="deleteBook" data-id="{{item.detail._id}}">删除</view>
+    </view>
+    </view>
+  </view>
+</scroll-view>

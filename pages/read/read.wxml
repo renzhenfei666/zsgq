@@ -1,0 +1,55 @@
+<!--pages/read/read.wxml-->
+<scroll-view style="height:100vh;background:{{bgFont==1 ? bgColor.defaultBg:(bgFont==2 ? bgColor.darkBg:(bgFont==3 ? bgColor.potectEyesBg:none))}}" class="read" scroll-y="true" bindscroll="scroll" enable-back-to-top='true' scroll-top='{{scrollTop}}'>
+  <view class="text" bindtap="bottomPopup" style="color:{{bgFont==1 ? fontColor.defaultFc:(bgFont==2 ? fontColor.darkFc:(bgFont==3 ? fontColor.potectEyesFc:none))}}">
+    <view>
+      <text decode class="title" style="font-size:{{titleFontSize}}rpx">{{content.title}}</text>
+    </view>
+    <view>
+      <text decode class="cpContent" style="font-size:{{contentFontSize}}rpx">{{content.cpContent}}</text>
+    </view>
+    <!-- <rich-text space class="cpContent">{{content.cpContent}}</rich-text> -->
+  </view>
+  <view class="chapter-btn">
+    <view class="next-chapter ">
+      <van-button round type="default" size="large" bind:click="nextChapter">下一章</van-button>
+    </view>
+    <view class="previous-chapter">
+      <van-button round type="default" size="normal" bind:click="previousChapter">上一章</van-button>
+      <van-button round type="default" size="normal" bind:click="leftPopup">目  录</van-button>
+    </view>
+  </view>
+  <van-popup
+    show="{{ show }}"
+    position="left"
+    custom-class="left"
+    custom-style="width:80%;height:100%;background:#fafafa;padding:0 25rpx;"
+    bind:close="onClose"
+    z-index="999"
+  >
+    <view wx:for="{{catalog}}" wx:key="index" class="catalog {{item.link==catalogCur?'catalogCur':''}}" bindtap="switchChapter" data-link="{{item.link}}">{{item.title}}</view>
+  </van-popup>
+  <van-popup
+    show="{{ show2 }}"
+    position="bottom"
+    custom-class="bottom"
+    custom-style="width:100%;height:40%;display:flex;flex-direction:column;padding:0 30rpx;"
+    bind:close="onClose2"
+    z-index="100"
+  >
+    <view class="bottomBtn1">
+      <van-button round type="default" size="normal" bind:click="reduceFontSize">Aa-</van-button>
+      <!-- <van-progress custom-class="progress" inactive percentage="50" show-pivot="false"/> -->
+      <van-button round type="default" size="normal" bind:click="increaseFontSize">Aa+</van-button>
+    </view>
+    <view class="bottomBtn2">
+      <van-button type="warning" plain  size="normal" bind:click="handelDefault">默认</van-button>
+      <van-button type="default" size="normal" bind:click="handelDark">夜间</van-button>
+      <van-button type="primary" size="normal" bind:click="handelProtectEyes">护眼</van-button>
+    </view>
+    <view class="bottomBtn3">
+      <van-button type="default" size="normal" bind:click="previousChapter">上一章</van-button>
+      <van-button type="default" size="normal" bind:click="leftPopup">目录</van-button>
+      <van-button type="default" size="normal" bind:click="nextChapter">下一章</van-button>
+    </view>
+  </van-popup>
+</scroll-view>

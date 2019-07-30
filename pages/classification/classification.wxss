@@ -1,0 +1,64 @@
+/**index.wxss**/
+.container{
+  flex-direction: row;
+  padding-top:30rpx;
+}
+
+.sort{
+  width:300rpx;
+  height:150rpx;
+  margin-bottom:30rpx;
+}
+
+.nav{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icon{
+  width:150rpx;
+  height:150rpx;
+  position: relative;
+}
+
+.iconImg:nth-child(1){
+  width:80rpx;
+  height:120rpx;
+  position: absolute;
+  left:0;
+  top:30rpx;
+  z-index:100
+}
+
+.iconImg:nth-child(2){
+  width:100rpx;
+  height:150rpx;
+  position: absolute;
+  left:25rpx;
+  z-index:200
+}
+
+.iconImg:nth-child(3){
+  width:60rpx;
+  height:90rpx;
+  position: absolute;
+  right:0;
+  top:60rpx;
+  z-index:100
+}
+.sortName{
+  width:120rpx;
+  height:150rpx;
+}
+
+.name{
+  font-size: 36rpx;
+  font-weight: bold;
+  color:#000;
+}
+
+.bookCount{
+  font-size: 26rpx;
+  color:#929292;
+}

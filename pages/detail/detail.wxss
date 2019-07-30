@@ -1,0 +1,170 @@
+/* pages/detail/detail.wxss */
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+.container{
+  flex-direction:column;
+}
+
+.scroll{
+  flex:1;
+}
+
+.top{
+  display: flex;
+  flex-direction:row;
+  padding:30rpx;
+}
+
+.cover{
+  width:225rpx;
+  height:300rpx;
+}
+
+.iconImg{
+  width:100%;
+  height:100%;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx 5rpx #c5c5c5;
+}
+
+.detail{
+  margin-left:30rpx;
+  display: flex;
+  flex-direction:column;
+  flex-wrap: nowrap;
+}
+
+.title{
+  font-weight:bold;
+  font-size:36rpx;
+  color:#000;
+  height:100rpx;
+  line-height:100rpx;
+}
+
+.score{
+  font-size:30rpx;
+  color:#c8c7cc;
+  height:80rpx;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.scoreText{
+  margin-right:15rpx;
+  font-size:33rpx;
+  color:#ffcd3e;
+}
+
+.author{
+  font-size:30rpx;
+  color:#c8c7cc;
+  height:80rpx;
+  line-height:80rpx;
+}
+
+.label{
+  color:#f3817f;
+}
+
+.wordCount{
+
+  font-size:30rpx;
+  color:#c8c7cc;
+  height:80rpx;
+  line-height:80rpx;
+}
+
+.collection{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align:center;
+}
+
+.num{
+  color:#858e98;
+  font-size:34rpx;
+  font-weight:bold;
+
+}
+
+.zs{
+  color:#c8c7cc;
+  font-size:25rpx;
+}
+
+.introduction{
+  padding:30rpx;
+  font-size:30rpx;
+  color:#000000;
+}
+
+.van-collapse-item__wrapper{
+  height:auto !important;
+}
+
+.van-tabbar-item{
+  font-size:60rpx;
+  font-weight:bold;
+  color:#fff;
+}
+
+.van-cell__title{
+  font-size:36rpx;
+  font-weight: bold;
+}
+
+.btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width:100%;
+  height:120rpx;
+
+
+}
+
+.cu-btn.lg {
+  padding: 0 60rpx;
+}
+
+.hotReview{
+  padding:0 40rpx 30rpx 40rpx;
+}
+
+.hot{
+  margin-bottom: 20rpx;
+}
+
+.review{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:30px 30rpx 10rpx 30rpx;
+}
+
+.noReview{
+  text-align:center;
+  padding-top:30rpx;
+  font-size:13px;
+  color: #999;
+}
+
+.review-title{
+  font-size:33rpx;
+  color:#000;
+  line-height:40rpx;
+  padding-bottom:15rpx;
+}
+
+.review-content{
+  font-size:13px;
+  color: #999;
+  line-height:40rpx;
+}

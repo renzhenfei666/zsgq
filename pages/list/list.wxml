@@ -1,0 +1,18 @@
+<!--pages/list/list.wxml-->
+<view class="container">
+  <scroll-view class="scroll-view" scroll-y bindscrolltolower="loadMore" style="height:100vh">
+    <view class="list item-{{index}}" wx:for="{{list}}" wx:key="index">
+      <navigator url="../detail/detail?id={{item._id}}" class="nav">
+        <view class="icon">
+          <image class="iconImg" lazy-load="true" src="{{item.show ? item.cover :noCover}}" mode="aspectFill"></image>
+        </view>
+        <view class="sortName">
+          <view class="title">{{item.title}}</view>
+          <view class="shortIntro van-multi-ellipsis--l3">{{item.shortIntro}}</view>
+          <view class="author">{{item.author}}</view>
+        </view>
+      </navigator>
+    </view>
+  </scroll-view>
+  <van-toast id="van-toast" />
+</view>

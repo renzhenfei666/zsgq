@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/bookshelf/bookshelf",
+    "pages/index/index",
+    "pages/classification/classification",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/ranking/ranking",
+    "pages/vip/vip",
+    "pages/home/home",
+    "pages/search/search",
+    "pages/searchResult/searchResult",
+    "pages/read/read"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "追书鬼器",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#39b54a",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "/images/tabbar/bookshelf_cur.png",
+        "iconPath": "/images/tabbar/bookshelf.png",
+        "pagePath": "pages/bookshelf/bookshelf",
+        "text": "书架"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/basics_cur.png",
+        "iconPath": "/images/tabbar/basics.png",
+        "pagePath": "pages/index/index",
+        "text": "书城"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/about_cur.png",
+        "iconPath": "/images/tabbar/about.png",
+        "pagePath": "pages/home/home",
+        "text": "我的"
+      }
+    ]
+  }
+}

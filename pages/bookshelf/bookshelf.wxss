@@ -1,0 +1,56 @@
+/* pages/bookshelf/bookshelf.wxss */
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+.cu-list.menu-avatar>.cu-item {
+	padding-left: 20rpx;
+  padding-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.nav{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon{
+  width:80rpx;
+  height:120rpx;
+}
+
+.iconImg{
+  width:100%;
+  height:100%;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx 5rpx #c5c5c5;
+}
+
+.sortName{
+  height:100%;
+  width:590rpx;
+  display: flex; 
+  flex-direction:column;
+}
+
+.title{
+  font-size:34rpx;
+  font-weight: blod;
+  color:#000;
+  flex:1;
+}
+
+.shortIntro{
+  font-size:26rpx;
+  color:#929292;
+  flex:1;
+}
+
+.updated{
+  font-size:26rpx;
+  color:#929292;
+  flex:1;
+}
+

@@ -1,0 +1,19 @@
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <image class="cu-avatar xl round" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg"></image>
+    <view class="text-xl margin-top">
+      <text class="text-df">任振飞</text>
+    </view>
+    <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <view class="content" bindtap="CopyLink" data-link="https://github.com/renzhenfei666">
+        <text class="cuIcon-github text-grey"></text>
+        <text class="text-grey">GitHub</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>
